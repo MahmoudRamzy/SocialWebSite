@@ -1,4 +1,4 @@
-{% extends "base.html" %} {% block title %} {{ image.title }} {% endblock %}
+{% extends "base.html" %} {% block title %}{{ image.title }}{% endblock %}
 {%block content %}
 <h1>{{ image.title }}</h1>
 <img src="{{ image.image.url }}" class="image-detail" />
@@ -19,4 +19,4 @@
   </div>
   {% empty %} Nobody likes this image yet. {% endfor %}
 </div>
-{% endwith %} {% endblock %}
+{% endwith %} {% endblock %} >>>>>>> 8b10c28d295ccd0e19cf3cf79e47d88f53a79ab7
