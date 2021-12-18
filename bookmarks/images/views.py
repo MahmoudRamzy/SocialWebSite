@@ -4,7 +4,6 @@ from django.contrib import messages
 from .forms import ImageCreateForm
 from .models import Image
 
-
 @login_required
 def image_create(request):
     if request.method == 'POST':
@@ -28,10 +27,6 @@ def image_create(request):
                   {'section': 'images',
                    'form': form})
 
-
 def image_detail(request, id, slug):
     image = get_object_or_404(Image, id=id, slug=slug)
-    return render(request,
-                  'images/image/detail.html',
-                  {'section': 'images',
-                   'image': image})
+    return render(request,'images/image/detail.html',{'section': 'images','image': image})
